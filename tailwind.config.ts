@@ -22,7 +22,7 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        primary: "var(--font-jetbrainsMono)",
+        primary: "var(--font-jestbrainsMono)",  // Reference the variable correctly
       },
       screens: {
         sm: '640px',

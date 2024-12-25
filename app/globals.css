@@ -1,9 +1,16 @@
+/* globals.css */
+
+/* Define the font variable */
+:root {
+  --font-jestbrainsMono: 'JetBrains Mono', monospace;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary bg-primary text-white leading-loose;  /* This applies the font-primary class */
   }
 }
