@@ -70,6 +70,12 @@ const Work = () => {
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
               </div>
+              {/* PROJECT CATEGORY */}
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                {project.category} project
+              </h2>
+              {/* PROJECT DESCRIPTION */}
+              <p></p>
             </div>
           </div>
           <div className="w-full xl:w-[50%]">slider</div>
