@@ -78,7 +78,9 @@ const Work = () => {
               <p className="text-white/60">{project.description}</p>
               {/* STACK */}
               <ul>
-                
+                {project.stack.map((item, index) => {
+                  return <li key={index}>{item.name}</li>
+                })}
               </ul>
             </div>
           </div>
