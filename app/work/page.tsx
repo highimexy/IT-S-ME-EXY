@@ -75,7 +75,11 @@ const Work = () => {
                 {project.category} project
               </h2>
               {/* PROJECT DESCRIPTION */}
-              <p></p>
+              <p className="text-white/60">{project.description}</p>
+              {/* STACK */}
+              <ul>
+                
+              </ul>
             </div>
           </div>
           <div className="w-full xl:w-[50%]">slider</div>
