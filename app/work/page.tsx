@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { BsArrowRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
 import {
   Tooltip,
@@ -65,7 +65,7 @@ const Work = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flew-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div>
+            <div className=" flex flex-col gap-[30px] h-[50%]">
               {/* OUTLINE NUMBER */}
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
@@ -79,9 +79,44 @@ const Work = () => {
               {/* STACK */}
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
-                  return <li key={index} className="font-xl text-accent">{item.name}</li>
+                  return <li key={index} className="font-xl text-accent">{item.name}
+                  {/* REMOVE THE LAST COMMA */}
+                  {index !== project.stack.length - 1 && ","}</li>
                 })}
               </ul>
+              {/* BORDER */}
+              <div className="border border-white/20"></div>
+              {/* buttons */}
+              <div className="flex items-center gap-4">
+                <div>
+                  <Link href={project.live}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] bg-white/5 rounded-full flex justify-center group items-center">
+                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Live project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                </div>
+                <div>
+                  <Link href={project.github}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] bg-white/5 rounded-full flex justify-center group items-center">
+                          <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Github repository</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
           <div className="w-full xl:w-[50%]">slider</div>
