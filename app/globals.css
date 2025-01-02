@@ -11,7 +11,7 @@
 
 @layer base {
   body {
-    @apply font-primary bg-primary text-white leading-loose; /* This applies the font-primary class */
+    @apply m-4 font-primary bg-primary text-white leading-loose; 
   }
   h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;

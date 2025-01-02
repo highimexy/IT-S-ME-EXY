@@ -54,7 +54,6 @@ const projects = [
   },
 ];
 
-
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
@@ -63,7 +62,7 @@ const Work = () => {
     const currentIndex = swiper.activeIndex;
     //update project state based on current slide index
     setProject(projects[currentIndex]);
-  }
+  };
 
   return (
     <motion.section
@@ -72,7 +71,7 @@ const Work = () => {
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flew-row xl:gap-[30px]">
+        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className=" flex flex-col gap-[30px] h-[50%]">
               {/* OUTLINE NUMBER */}
@@ -140,7 +139,11 @@ const Work = () => {
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => {
-                return <SwiperSlide key={index}>slide</SwiperSlide>;
+                return (
+                  <SwiperSlide key={index} className="w-full">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20"></div>
+                  </SwiperSlide>
+                );
               })}
             </Swiper>
           </div>
