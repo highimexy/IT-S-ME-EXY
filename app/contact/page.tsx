@@ -32,12 +32,32 @@ const info = [
     title: "Address",
     description: "Gdańsk",
   },
-]
+];
 
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  return <div>contactt page</div>;
+  return (
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
+      className="py-6"
+    >
+      <div>
+        <div>
+          {/* form */}
+          <div>
+            <form>form</form>
+          </div>
+          {/* info */}
+          <div>info</div>
+        </div>
+      </div>
+    </motion.section>
+  );
 };
 
 export default Contact;
