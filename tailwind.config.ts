@@ -16,11 +16,6 @@ export default {
           hover: '#897fe1'
         },
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
-      },
       fontFamily: {
         primary: "var(--font-jestbrainsMono)",  // Reference the variable correctly
       },
